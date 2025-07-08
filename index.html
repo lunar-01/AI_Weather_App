@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"> <!-- ✅ Linked external CSS -->
+</head>
+<body>
+  <button id="themeToggle" class="theme-toggle sun" title="Toggle Theme">☀️</button>
+  <button id="chatBtn" title="Open Chat">💬</button>
+
+  <div class="container">
+    <h1>Weather Today</h1>
+    <div class="input-group">
+      <input type="text" id="cityInput" placeholder="Enter city name" />
+      <button class="unit-toggle" id="unitToggle">°C</button>
+    </div>
+    <button id="weatherBtn">Check Weather</button>
+    <div class="loader" id="loader"></div>
+    <div class="weather-card" id="weatherCard">
+      <div class="weather-emoji" id="weatherEmoji"></div>
+      <div class="weather-info">
+        <h2 id="cityName"></h2>
+        <div class="temperature" id="temperature"></div>
+        <div class="description" id="description"></div>
+        <div class="weather-details">
+          <p>💧 Humidity: <span id="humidity"></span></p>
+          <p>💨 Wind: <span id="windSpeed"></span></p>
+        </div>
+      </div>
+    </div>
+    <p class="error" id="error"></p>
+  </div>
+
+  <div class="chatbot-container" id="chatbotContainer">
+    <div class="chatbot-header">
+      <h2>Weather Chatbot</h2>
+      <button class="chatbot-close" id="chatbotClose">✖</button>
+    </div>
+    <div class="chatbot-messages" id="chatbotMessages"></div>
+    <div class="typing-indicator" id="typingIndicator">AI is typing<span>.</span><span>.</span><span>.</span></div>
+    <div class="chatbot-input-group">
+      <textarea class="chatbot-input" id="chatbotInput" placeholder="Ask about the weather..."></textarea>
+      <button class="chatbot-send" id="chatbotSend">Send</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script> <!-- ✅ Linked external JS -->
+</body>
+</html>
